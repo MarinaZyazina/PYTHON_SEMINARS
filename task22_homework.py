@@ -10,13 +10,6 @@
 # 3 6 9 12 15 18
 # Output: 6 12
 
-# input_list = []
-# # list_len = int(input("Введите количество элементов в массиве: "))
-# # for _ in range(list_len): 
-# #     input_list.append(int(input(f"Введите число: ")))
-# # print(input_list)
-
-
 n=(int(input("Введите количество элементов 1-го множества: ")))
 num_list_1=[]
 for i in range(n):
