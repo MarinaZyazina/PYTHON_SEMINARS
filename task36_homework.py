@@ -16,9 +16,26 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
-def print_operation_table(operation, num_rows=6, num_columns=6):
-    a = [[operation(i, j) for j in range(1, num_columns + 1)] for i in range(1, num_rows + 1)]
-    for i in a:
-        print(*[f"{x:>3}" for x in i])
 
-print_operation_table(lambda x, y: x * y)
+# # ! Только умножение
+# def print_operation_table(operation, num_rows=6, num_columns=6):
+#     a = [[operation(i, j) for j in range(1, num_columns + 1)] for i in range(1, num_rows + 1)]
+#     for i in a:
+#         print(*[f"{x:>3}" for x in i])
+
+# print_operation_table(lambda x, y: x * y)
+
+
+# Пример универсального решения 
+def print_operation_table(operation, num_rows=6, num_columns=6):
+    for i in range(1, num_rows + 1):
+        for j in range(1, num_columns + 1):
+            if i != 1 and j != 1:
+                print(operation(i, j), end="\t")
+            elif i == 1:
+                print(j, end="\t")
+            else:
+                print(j, end="\t")
+        print()
+
+print_operation_table(lambda x, y: x + y)
